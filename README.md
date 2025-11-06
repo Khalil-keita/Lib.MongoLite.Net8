@@ -106,9 +106,3 @@ public class UserService
     }
 }
 ```
-
-### Relations Avancées
-```C#
-// Program.cs
-builder.Services.AddMongoLite(builder.Configuration);
-```
