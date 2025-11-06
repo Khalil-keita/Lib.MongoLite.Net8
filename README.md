@@ -40,10 +40,6 @@ public class User
     public string FirstName { get; set; } = string.Empty;
     public string LastName { get; set; } = string.Empty;
     public bool IsActive { get; set; } = true;
-    
-    // Relations
-    public List<Post> Posts => HasMany<Post>();
-    public Profile Profile => HasOne<Profile>();
 }
 
 [BsonCollection("posts")]
@@ -52,9 +48,6 @@ public class Post
     public string Title { get; set; } = string.Empty;
     public string Content { get; set; } = string.Empty;
     public string UserId { get; set; } = string.Empty;
-    
-    // Relation inverse
-    public User Author => BelongsTo<User>();
 }
 ```
 
