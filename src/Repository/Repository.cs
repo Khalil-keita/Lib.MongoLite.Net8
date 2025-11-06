@@ -6,7 +6,7 @@ using MongoDB.Driver;
 
 namespace Lib.MongoLite.Src.Repository
 {
-    public class Repository<T>(IMongoDbContext context) : IRepository<T> where T : class
+    public sealed class Repository<T>(IMongoDbContext context) : IRepository<T> where T : class
     {
         private readonly IMongoCollection<T> _collection = context.GetCollection<T>();
 
