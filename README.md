@@ -34,7 +34,7 @@ builder.Services.AddMongoLite(builder.Configuration);
 ### Utilisation
 ```C#
 [BsonCollection("users")]
-public class User : Entity
+public class User 
 {
     public string Email { get; set; } = string.Empty;
     public string FirstName { get; set; } = string.Empty;
@@ -47,7 +47,7 @@ public class User : Entity
 }
 
 [BsonCollection("posts")]
-public class Post : Entity
+public class Post 
 {
     public string Title { get; set; } = string.Empty;
     public string Content { get; set; } = string.Empty;
